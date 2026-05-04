@@ -29,7 +29,7 @@ class TicketServiceImplTest {
         ticketService = new TicketServiceImpl(ticketPaymentService, seatReservationService);
     }
 
-    // ── Valid purchases ────────────────────────────────────────────────────
+    //  Valid purchases
 
     @Test
     @DisplayName("Adult only: correct payment and seat count")
@@ -67,7 +67,7 @@ class TicketServiceImplTest {
                 ticketService.purchaseTickets(1L, new TicketTypeRequest(Type.ADULT, 25)));
     }
 
-    // ── Invalid account ────────────────────────────────────────────────────
+    //  Invalid account
 
     @Test
     @DisplayName("Account ID of zero is rejected")
@@ -90,7 +90,7 @@ class TicketServiceImplTest {
                 ticketService.purchaseTickets(null, new TicketTypeRequest(Type.ADULT, 1)));
     }
 
-    // ── Invalid ticket rules ───────────────────────────────────────────────
+    //  Rules for invalid tickets
 
     @Test
     @DisplayName("Over 25 tickets is rejected")

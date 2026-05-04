@@ -41,7 +41,7 @@ public class TicketServiceImpl implements TicketService {
         seatReservationService.reserveSeat(accountId, totalSeats);
     }
 
-    // ── Validation ────────────────────────────────────────────────────────────
+    //  For validation
 
     private void validateAccountId(Long accountId) {
         if (accountId == null || accountId <= 0) {
@@ -77,7 +77,7 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
-    // ── Utility ───────────────────────────────────────────────────────────────
+    // For utility
 
     private int countByType(TicketTypeRequest[] requests, Type type) {
         int count = 0;
